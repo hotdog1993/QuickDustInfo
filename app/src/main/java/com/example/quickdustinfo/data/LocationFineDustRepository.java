@@ -5,7 +5,7 @@ import com.example.quickdustinfo.util.FineDustUtil;
 
 import retrofit2.Callback;
 
-public class LocationFineDustRepository implements FineDustRepository {
+public class LocationFineDustRepository implements FineDustRepository {         //미세먼지 정보를 가져오도록 FineDustRepository를 구체화
     private FineDustUtil mFindDustUtil;
     private double mLatitude;
     private double mLongitude;

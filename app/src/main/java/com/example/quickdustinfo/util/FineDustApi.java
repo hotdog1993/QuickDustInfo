@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.Query;
 
-public interface FineDustApi {
+public interface FineDustApi {      //Retrofit의 통신 API들을 정의
     String BASE_URL = "http://apis.skplanetx.com/";
 
     @Headers("appKey: d39d6ed5-38b2-3205-b7f2-db02ea0ecf3a")
