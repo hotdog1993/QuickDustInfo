@@ -1,4 +1,4 @@
-package com.example.quickdustinfo.finedust;
+ package com.example.quickdustinfo.finedust;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.example.quickdustinfo.MainActivity;
 import com.example.quickdustinfo.R;
 import com.example.quickdustinfo.data.FineDustRepository;
 import com.example.quickdustinfo.data.LocationFineDustRepository;
@@ -45,6 +46,7 @@ public class FineDustFragment extends Fragment implements FineDustContract.View{
             mRepository = new LocationFineDustRepository(lat, lng);
         }else {                                                                 //좌푯값이 없을 때
             mRepository = new LocationFineDustRepository();
+            ((MainActivity)getActivity()).getLastKnownLocation();
         }
         mPresenter = new FineDustPresenter(mRepository, this);
         mPresenter.loadFineDustData();

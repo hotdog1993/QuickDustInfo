@@ -29,7 +29,7 @@ public class LocationFineDustRepository implements FineDustRepository {         
     }
 
     @Override
-    public void getFindDustData(Callback<FineDust> callback) {
+    public void getFineDustData(Callback<FineDust> callback) {
         mFindDustUtil.getApi().getFineDust(mLatitude, mLongitude)
                 .enqueue(callback);         //비동기로 콜백으로 던지면 외부에서 받음
     }

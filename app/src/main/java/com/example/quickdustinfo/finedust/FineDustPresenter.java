@@ -20,7 +20,7 @@ public class FineDustPresenter implements FineDustContract.UserActionsListener{ 
     public void loadFineDustData() {        //데이터 가져오는 흐름 알 수 있음
         if(mRepository.isAvailable()) {     //데이터 제공이 가능하면
             mView.loadingStart();           //로딩 시작
-            mRepository.getFindDustData(new Callback<FineDust>() {      //데이터 가져오기
+            mRepository.getFineDustData(new Callback<FineDust>() {      //데이터 가져오기
                 @Override
                 public void onResponse(Call<FineDust> call, Response<FineDust> response) {
                     mView.showFineDustResult(response.body());          //데이터 표시하기
